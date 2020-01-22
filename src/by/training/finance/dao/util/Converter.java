@@ -14,8 +14,8 @@ public class Converter {
     private static final String REGEX = "\\|";
     private static final int VALID_LENGTH = 6;
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
-    private static final String EXPENSE_TYPENAME = "Expense";
-    private static final String INCOME_TYPENAME = "Income";
+    private static final String EXPENSE_TYPENAME = "ExpenseTransaction";
+    private static final String INCOME_TYPENAME = "IncomeTransaction";
 
     public static String convertToString(Transaction transaction)
             throws InvalidParameterException, InvalidFieldException {

@@ -1,4 +1,4 @@
-package by.training.finance.controller;
+package by.training.finance.controller.command;
 
 public interface Command {
 

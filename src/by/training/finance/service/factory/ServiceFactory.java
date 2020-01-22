@@ -6,7 +6,7 @@ public final class ServiceFactory {
 
     private static final ServiceFactory instance = new ServiceFactory();
 
-    private final TransactionLogImpl journalServiceImpl = new TransactionLogImpl();
+    private final TransactionLogImpl transactionLog = new TransactionLogImpl();
 
     private ServiceFactory() {
 
@@ -16,8 +16,8 @@ public final class ServiceFactory {
         return instance;
     }
 
-    public TransactionLogImpl getJournalServiceImpl() {
-        return journalServiceImpl;
+    public TransactionLogImpl getTransactionLog() {
+        return transactionLog;
     }
 }
 
