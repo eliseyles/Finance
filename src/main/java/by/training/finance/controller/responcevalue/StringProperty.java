@@ -10,7 +10,9 @@ public class StringProperty {
         properties = new Properties();
         try {
             properties.load(new FileReader("./src/main/resources/controllerString.properties"));
-        } catch (IOException ignored) {
+        } catch (IOException e) {
+            System.err.println("Internal Error: property file not found");
+            //todo fix this catching
         }
     }
 

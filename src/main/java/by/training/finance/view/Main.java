@@ -39,7 +39,7 @@ public class Main {
 //
 //        System.out.println(editIncomeResponse);
 
-        String balanceResponse = controller.executeTask("get_current_balanceа");
+        String balanceResponse = controller.executeTask("get_current_balance");
 
         System.out.println(balanceResponse);
 
