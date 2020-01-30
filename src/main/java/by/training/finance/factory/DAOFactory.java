@@ -1,4 +1,4 @@
-package by.training.finance.dao.factory;
+package by.training.finance.factory;
 
 import by.training.finance.dao.TransactionDAO;
 import by.training.finance.dao.impl.FileTransactionDAOImpl;

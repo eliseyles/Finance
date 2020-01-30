@@ -1,4 +1,4 @@
-package by.training.finance.service.factory;
+package by.training.finance.factory;
 
 import by.training.finance.service.impl.TransactionLogImpl;
 

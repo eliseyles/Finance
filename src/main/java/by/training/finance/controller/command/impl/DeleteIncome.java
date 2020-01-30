@@ -3,7 +3,7 @@ package by.training.finance.controller.command.impl;
 import by.training.finance.controller.command.Command;
 import by.training.finance.controller.responcevalue.StringProperty;
 import by.training.finance.exception.ServiceException;
-import by.training.finance.service.factory.ServiceFactory;
+import by.training.finance.factory.ServiceFactory;
 import by.training.finance.service.impl.TransactionLogImpl;
 
 public class DeleteIncome implements Command {

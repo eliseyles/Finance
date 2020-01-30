@@ -4,7 +4,7 @@ import by.training.finance.bean.IncomeType;
 import by.training.finance.bean.Transaction;
 import by.training.finance.dao.TransactionDAO;
 import by.training.finance.exception.DAOException;
-import by.training.finance.dao.factory.DAOFactory;
+import by.training.finance.factory.DAOFactory;
 import by.training.finance.service.TransactionLog;
 import by.training.finance.exception.ServiceException;
 import by.training.finance.service.validation.Validator;
