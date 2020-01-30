@@ -1,4 +1,4 @@
-package by.training.finance.service.validation;
+package by.training.finance.validation;
 
 import by.training.finance.bean.Transaction;
 import by.training.finance.exception.ServiceException;
@@ -6,7 +6,7 @@ import by.training.finance.exception.ServiceException;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class Validator {
+public class TransactionValidator {
 
     private static final double EPS = 0.0001;
 

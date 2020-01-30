@@ -7,7 +7,7 @@ import by.training.finance.exception.DAOException;
 import by.training.finance.factory.DAOFactory;
 import by.training.finance.service.TransactionLog;
 import by.training.finance.exception.ServiceException;
-import by.training.finance.service.validation.Validator;
+import by.training.finance.validation.TransactionValidator;
 
 import java.math.BigDecimal;
 
@@ -18,7 +18,7 @@ public class TransactionLogImpl implements TransactionLog {
 
     @Override
     public boolean addTransaction(Transaction transaction) throws ServiceException {
-        Validator.validateTransaction(transaction);
+        TransactionValidator.validateTransaction(transaction);
 
         try {
             transactionDAO.add(transaction);
@@ -30,7 +30,7 @@ public class TransactionLogImpl implements TransactionLog {
 
     @Override
     public void updateTransaction(int id, Transaction transaction) throws ServiceException {
-        Validator.validateTransaction(transaction);
+        TransactionValidator.validateTransaction(transaction);
         try {
             transactionDAO.update(id, transaction);
         } catch (DAOException ex) {
@@ -40,7 +40,7 @@ public class TransactionLogImpl implements TransactionLog {
 
     @Override
     public Transaction getById(int id) throws ServiceException {
-        Validator.validateId(id);
+        TransactionValidator.validateId(id);
         try {
             return transactionDAO.get(id);
         } catch (DAOException ex) {
@@ -67,7 +67,7 @@ public class TransactionLogImpl implements TransactionLog {
         }
         BigDecimal balance = new BigDecimal(0);
         for (int i = 0; i < transactions.length; i++) {
-            Validator.validateTransaction(transactions[i]);
+            TransactionValidator.validateTransaction(transactions[i]);
             if (transactions[i].getType().getClass() == IncomeType.class) {
                 balance = balance.add(transactions[i].getAmount());
             } else {
@@ -79,7 +79,7 @@ public class TransactionLogImpl implements TransactionLog {
 
     @Override
     public void deleteById(int id) throws ServiceException {
-        Validator.validateId(id);
+        TransactionValidator.validateId(id);
         try {
             transactionDAO.delete(id);
         } catch (DAOException ex) {
