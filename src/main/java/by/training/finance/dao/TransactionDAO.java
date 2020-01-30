@@ -2,7 +2,7 @@ package by.training.finance.dao;
 
 
 import by.training.finance.bean.Transaction;
-import by.training.finance.dao.exception.DAOException;
+import by.training.finance.exception.DAOException;
 
 public interface TransactionDAO {
 

@@ -1,8 +1,8 @@
 package by.training.finance.dao.util;
 
 import by.training.finance.bean.*;
-import by.training.finance.dao.exception.InvalidFieldException;
-import by.training.finance.dao.exception.InvalidParameterException;
+import by.training.finance.exception.InvalidFieldException;
+import by.training.finance.exception.InvalidParameterException;
 
 import java.math.BigDecimal;
 import java.text.ParseException;

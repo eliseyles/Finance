@@ -1,7 +1,7 @@
 package by.training.finance.service.validation;
 
 import by.training.finance.bean.Transaction;
-import by.training.finance.service.exception.ServiceException;
+import by.training.finance.exception.ServiceException;
 
 import java.math.BigDecimal;
 import java.util.Date;
