@@ -5,13 +5,13 @@ import by.training.finance.bean.Transaction;
 import by.training.finance.dao.TransactionDAO;
 import by.training.finance.exception.DAOException;
 import by.training.finance.factory.DAOFactory;
-import by.training.finance.service.TransactionLog;
+import by.training.finance.service.TransactionJournal;
 import by.training.finance.exception.ServiceException;
 import by.training.finance.validation.TransactionValidator;
 
 import java.math.BigDecimal;
 
-public class TransactionLogImpl implements TransactionLog {
+public class TransactionJournalImpl implements TransactionJournal {
 
     private DAOFactory daoFactory = DAOFactory.getInstance();
     private TransactionDAO transactionDAO = daoFactory.getTransactionDAO();
@@ -26,10 +26,11 @@ public class TransactionLogImpl implements TransactionLog {
             throw new ServiceException("Addition has been interrupted", ex);
         }
         return true;
+        //todo
     }
 
     @Override
-    public void updateTransaction(int id, Transaction transaction) throws ServiceException {
+    public void updateTransactionById(int id, Transaction transaction) throws ServiceException {
         TransactionValidator.validateTransaction(transaction);
         try {
             transactionDAO.update(id, transaction);

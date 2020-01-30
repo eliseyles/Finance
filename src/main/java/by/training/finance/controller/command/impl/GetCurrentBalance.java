@@ -4,7 +4,7 @@ import by.training.finance.controller.command.Command;
 import by.training.finance.controller.responcevalue.StringProperty;
 import by.training.finance.exception.ServiceException;
 import by.training.finance.factory.ServiceFactory;
-import by.training.finance.service.impl.TransactionLogImpl;
+import by.training.finance.service.impl.TransactionJournalImpl;
 
 public class GetCurrentBalance implements Command {
 
@@ -14,7 +14,7 @@ public class GetCurrentBalance implements Command {
         String[] requestData = request.split(delimiter);
 
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
-        TransactionLogImpl transactionLog = serviceFactory.getTransactionLog();
+        TransactionJournalImpl transactionLog = serviceFactory.getTransactionLog();
 
         try {
             response = transactionLog.getCurrentBalance().toString();

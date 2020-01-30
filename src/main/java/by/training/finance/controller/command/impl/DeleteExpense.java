@@ -4,7 +4,7 @@ import by.training.finance.controller.command.Command;
 import by.training.finance.controller.responcevalue.StringProperty;
 import by.training.finance.exception.ServiceException;
 import by.training.finance.factory.ServiceFactory;
-import by.training.finance.service.impl.TransactionLogImpl;
+import by.training.finance.service.impl.TransactionJournalImpl;
 
 public class DeleteExpense implements Command {
 
@@ -22,7 +22,7 @@ public class DeleteExpense implements Command {
         }
 
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
-        TransactionLogImpl transactionLog = serviceFactory.getTransactionLog();
+        TransactionJournalImpl transactionLog = serviceFactory.getTransactionLog();
 
         try {
             transactionLog.deleteById(id);

@@ -6,7 +6,7 @@ import by.training.finance.controller.command.Command;
 import by.training.finance.controller.responcevalue.StringProperty;
 import by.training.finance.exception.ServiceException;
 import by.training.finance.factory.ServiceFactory;
-import by.training.finance.service.impl.TransactionLogImpl;
+import by.training.finance.service.impl.TransactionJournalImpl;
 
 import java.math.BigDecimal;
 
@@ -36,10 +36,10 @@ public class EditExpense implements Command {
         }
 
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
-        TransactionLogImpl transactionLog = serviceFactory.getTransactionLog();
+        TransactionJournalImpl transactionLog = serviceFactory.getTransactionLog();
 
         try {
-            transactionLog.updateTransaction(id, expenseTransaction);
+            transactionLog.updateTransactionById(id, expenseTransaction);
             response = StringProperty.getStringValue("expenseEdited");
         } catch (ServiceException e) {
             response = StringProperty.getStringValue("failedToEditExpense") + e.getMessage();

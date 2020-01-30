@@ -13,6 +13,7 @@ public class StringProperty {
         } catch (IOException e) {
             System.err.println("Internal Error: property file not found");
             //todo fix this catching
+            //todo think about enum vs property file
         }
     }
 

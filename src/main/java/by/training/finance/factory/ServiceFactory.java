@@ -1,12 +1,12 @@
 package by.training.finance.factory;
 
-import by.training.finance.service.impl.TransactionLogImpl;
+import by.training.finance.service.impl.TransactionJournalImpl;
 
 public final class ServiceFactory {
 
     private static final ServiceFactory instance = new ServiceFactory();
 
-    private final TransactionLogImpl transactionLog = new TransactionLogImpl();
+    private final TransactionJournalImpl transactionLog = new TransactionJournalImpl();
 
     private ServiceFactory() {
 
@@ -16,7 +16,7 @@ public final class ServiceFactory {
         return instance;
     }
 
-    public TransactionLogImpl getTransactionLog() {
+    public TransactionJournalImpl getTransactionLog() {
         return transactionLog;
     }
 }

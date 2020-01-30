@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class TransactionValidator {
+    //todo change to nonstatic class like pole
 
     private static final double EPS = 0.0001;
 

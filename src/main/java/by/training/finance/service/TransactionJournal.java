@@ -5,11 +5,11 @@ import by.training.finance.exception.ServiceException;
 
 import java.math.BigDecimal;
 
-public interface TransactionLog {
+public interface TransactionJournal {
 
     boolean addTransaction(Transaction transaction) throws ServiceException;
 
-    void updateTransaction(int id, Transaction transaction) throws ServiceException;
+    void updateTransactionById(int id, Transaction transaction) throws ServiceException;
 
     Transaction getById(int id) throws ServiceException;
 
